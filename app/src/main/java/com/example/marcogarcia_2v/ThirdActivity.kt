@@ -21,7 +21,7 @@ class ThirdActivity  : AppCompatActivity(){
         btn2 = findViewById(R.id.btn2)
         btn3 = findViewById(R.id.btn3)
 
-        val videojuego: videojuego? = intent.getSerializableExtra("videojuego") as videojuego
+        val videojuego: videojuego = intent.getSerializableExtra("videojuego") as videojuego
         var listaVideoJuego: ArrayList<videojuego> = intent.getSerializableExtra("listaVideojuego") as ArrayList<videojuego>
 
 
@@ -39,14 +39,14 @@ class ThirdActivity  : AppCompatActivity(){
 
         btn2.setOnClickListener {
 
-            val dbHelper = DatabaseHelper(this)
+            val dbHelper = JuegosComprados(this)
 
             for (i in listaVideoJuego ){
 
                 if (videojuego != null) {
                     try {
                         dbHelper.escribir(i)
-                        
+
                     }catch(e: Exception){
 
 

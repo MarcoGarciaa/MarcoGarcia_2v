@@ -19,10 +19,10 @@ class SaveActivity : AppCompatActivity() {
         btn = findViewById(R.id.btn)
         textView = findViewById(R.id.textView)
 
-        var listaVideoJuego: ArrayList<videojuego> = intent.getSerializableExtra("listaVideojuego") as ArrayList<videojuego>
+        var listaVideoJuego= intent.getSerializableExtra("listaVideojuego") as ArrayList<videojuego>
 
         //Creamos la instancia de la clase DatabaseHelper, nos va a permitir acceder a los recursos de la aplicación
-        val dbHelper = DatabaseHelper(this)
+        val dbHelper = JuegosComprados(this)
 
 
         val lista2 = dbHelper.lectura()
