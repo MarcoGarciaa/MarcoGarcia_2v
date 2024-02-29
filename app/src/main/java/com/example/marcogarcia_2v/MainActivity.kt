@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
 
         btn.setOnClickListener {
 
-            if (nombre.text.toString() != null || valoracion.text.toString().toFloat() > 0  ) {
+            if (nombre.text.toString() != null || valoracion.text.toString() != null || valoracion.text.toString().toFloat() > 0  ) {
 
                 var videojuego: videojuego =
                     videojuego(nombre.text.toString(), valoracion.text.toString().toFloat())

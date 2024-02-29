@@ -32,10 +32,13 @@ class SecondActivity  : AppCompatActivity(){
 
         btn.setOnClickListener {
 
-            if (videojuego != null ) {
-                videojuego.setAño(año.text.toString().toInt())
-                videojuego.setEmpresa(empresa.text.toString())
-                listaVideoJuego.add(videojuego)
+            if ( año.text.toString().toInt()>0 ) {
+                if (videojuego != null) {
+                    videojuego.setAño(año.text.toString().toInt())
+                    videojuego.setEmpresa(empresa.text.toString())
+                    listaVideoJuego.add(videojuego)
+                }
+
 
             }
 
